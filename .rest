@@ -29,3 +29,27 @@ Content-Type: application/json
 }
 ###
 DELETE http://localhost:3000/contacts/679ddcfbf28d131833058e6b
+###
+POST https://cse341-w3-sn1o.onrender.com HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Jesse",
+  "lastName": "Pinkman",
+  "email": "purebluescience341@email.com",
+  "favoriteColor": "blue",
+  "birthday": "1984-09-24"
+}
+###
+PUT https://cse341-w3-sn1o.onrender.com/67996fc3435e8defbaa7f848 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Jae",
+    "lastName": "Doe",
+    "email": "jane.doe@email.com",
+    "favoriteColor": "red",
+    "birthday": "1/1/00"
+}
+###
+DELETE https://cse341-w3-sn1o.onrender.com HTTP/1.1

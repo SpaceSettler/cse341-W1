@@ -4,7 +4,7 @@ const myController = require('../controllers/contacts');
 
 routes.get('/', myController.all);
 routes.get('/:id', myController.one);
-routes.post('/', myController.postThis);
+routes.post('/post', myController.postThis);
 routes.put('/:id', myController.putThis);
 routes.delete('/:id', myController.deleteThis);
 
