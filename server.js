@@ -7,6 +7,13 @@ const swaggerUi = require('swagger-ui-express');
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json())
+    .use((req, res, next) => {
+        res.header('Access-Control-Allow-Origin', '*');
+        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Z-key');
+        req.header('Content-Type', 'application/json');
+        res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        next();
+    })
     .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
     .use('/', require('./routes'));
 
